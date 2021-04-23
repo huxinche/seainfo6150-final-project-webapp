@@ -1,0 +1,63 @@
+.banner{
+    /* max-height: 400px; */
+    overflow: hidden;
+    color: white;
+    position: relative;
+}
+.banner-img{
+    width: 100%;
+}
+
+.banner-content{
+    padding: 30px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    z-index: 2;
+    align-content: center;
+    align-items: center;
+}
+
+.divider{
+    margin: 20px auto;
+    border-bottom: 10px solid rgb(151, 4, 4);
+  
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .divider{
+        width: 100px;
+    }
+    .banner,.banner-content{
+        max-height: 400px;
+     }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .divider{
+        width: 150px;
+    }
+    .banner,.banner-content {
+        max-height: 450px;
+     }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    .divider{
+        width: 200px;
+    }
+    .banner, .banner-content {
+       max-height: 500px;
+    }
+
+}
+
+

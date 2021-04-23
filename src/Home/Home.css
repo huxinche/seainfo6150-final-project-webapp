@@ -1,0 +1,48 @@
+picture{
+    width: 100%;
+}
+
+.wapper{
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.wapper p{
+    text-align: center;
+    margin: 0 0 1.5em 0;
+    color: #6c757a;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+@media only screen and (max-width: 600px) {
+    .wapper{
+        padding: 10px 10px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .wapper{
+        padding: 20px 20px;
+  
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .wapper{
+       padding: 80px 80px;
+    }
+    .card-group{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 100px;
+        row-gap: 15px;
+        justify-items: center;
+    }
+    .item {
+        align-self:  center ;
+      }
+
+}
+
+

@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the Banner component correctly 1`] = `
+<div>
+  <div
+    class="banner"
+  >
+    <div>
+      <picture
+        class="banner-img"
+      >
+        <img
+          alt="Expolre, Expand, Connect"
+          class="banner-img"
+          src="https://www.northeastern.edu/graduate/wp-content/uploads/2016/05/homepage_science.jpg"
+        />
+      </picture>
+    </div>
+    <div
+      class="banner-content"
+    >
+      <div>
+        <h1
+          class="text-title"
+        >
+          Expolre, Expand, Connect
+        </h1>
+        <p
+          class="text-title"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

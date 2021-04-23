@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Lato:ital,wght@0,300;1,300&family=Oswald:wght@600&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,body{
+    margin: 0;
+    padding: 0;
+
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Dela Gothic One', cursive; 
+}
+
+a{
+    text-decoration: none;
+}
+
+a,a:visited{
+    color: inherit;
+}
+
+ul,li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.center{
+    text-align: center;
+}
+
+
+
+body {
+    font-family: 'Lato', cursive;
+}
+
+.text-title{
+    text-shadow: 1px 1px 1px #000;
+    color: white;
+}
+
+nav{
+    position: relative;
+    font-family: 'Oswald', cursive;
+    font-size: 18px;
+    background-color: rgb(27, 27, 117);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 10px;
+    color: white;
+}
+ 
+nav .auth{
+    height: 100%;
+}
+nav .auth li{
+    padding: 20px;
+    margin: 0;
+    height: 100%;
+    background-color: lightskyblue;
+}
+
+nav .auth li a{
+   margin: 0;
+}
+
+
+nav li {
+    text-align: center;
+    margin: 15px auto;
+}
+
+.header{
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+
+
+.nav-item:hover {
+   text-shadow:  1px 1px 2px black;
+}
+
+.selected{
+   font-weight: bolder;
+   color: gray !important;
+}
+
+.toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer; 
+    color: rgba(255,255,255,0.8);
+    font-size: 24px;
+}
+
+.title{
+    padding: 20px;
+    font-size: larger;
+    flex: 1 1 90vw;
+}
+
+.logo{
+    flex: 1 1 10vw;
+}
+
+.logo img{
+    width: 70px;
+    height: 70px;
+}
+
+select,input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+ input[type="password"],
+ input[type="date"]{
+    display: block;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    margin-top:  .25rem;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+input[type="password"]{
+    width: 100%;
+}
+
+.form-item{
+    margin-bottom: 1rem;
+}
+
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0 auto;
+    min-height: 68vh;
+}
+
+p {
+    font-family: "TiemposText",Georgia,serif;
+    color: #6c757a;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+footer{
+    background: #000;
+    clear: both;
+    font-family: "Circular","Helvetica",sans-serif;
+    color: white;
+    display: block;
+    padding: 30px 30px 15px;
+    position: relative;
+    width: 100%;
+}
+
+form label{
+    font-family: "Circular","Helvetica",sans-serif;
+}
+
+.ml-3{
+    margin-left: 3px;
+}
+
+.mt{
+   margin-top: 10px; 
+}
+
+.btn-sub{
+    background-color: cadetblue;
+    border-radius: 5px;
+}
+
+.error{
+    color: red;
+}
+
+table{
+    text-align: left;
+    width: 60vw;
+    margin: 0 auto;
+}
+
+table th, table td{
+    font-family: "TiemposText",Georgia,serif;
+    color: #6c757a;
+    font-size: 1.2em;
+    line-height: 1.6;
+    padding: 10px;
+}
+
+table td{
+    color: black;
+}
+
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .header{
+        height: 70px;
+    }
+    .logo img{
+        width: 70px;
+        height: 70px;
+    }
+    nav {
+        min-height: 60px;
+    }
+   .hide{
+        display: none !important;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .container{
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+    .header{
+        height: 100px;
+    }
+    nav {
+        min-height: 60px;
+    }
+    .logo img{
+        width: 100px;
+        height: 100px;
+    }
+    .hide{
+        display: none !important;
+    }
+   
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    nav {
+       
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+    }
+    nav .auth {
+        margin: 0;
+        margin-right: 20px;
+    }
+    .nav {
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .nav li {
+        margin: 0;
+    }
+    .nav 
+    .nav-item {
+        margin-left: 40px;
+    }
+    .logo {
+        margin-top: 0;
+    }
+   .toggle {
+       display: none;
+    }
+    .container{
+        padding-right: 100px;
+        padding-left: 100px;
+    }
+    .header{
+        height: 120px;
+    }
+    .logo img{
+        width: 120px;
+        height: 120px;
+    }
+    .hide{
+        display: inherit !important;
+    }
+   
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .container{
+        padding-right: 120px;
+        padding-left: 120px;
+    }
+    .hide{
+        display: inherit !important;
+    }
+}
+
+
+

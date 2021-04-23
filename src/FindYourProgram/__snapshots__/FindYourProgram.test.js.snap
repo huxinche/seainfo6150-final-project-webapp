@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the FindYourProgram component correctly 1`] = `
+<div>
+  <div
+    class="banner"
+  >
+    <div>
+      <picture
+        class="banner-img"
+      >
+        <img
+          alt="Find Your program"
+          class="banner-img"
+          src="FindYourProgram.jpeg"
+        />
+      </picture>
+    </div>
+    <div
+      class="banner-content"
+    >
+      <div>
+        <h1
+          class="text-title"
+        >
+          Find Your program
+        </h1>
+        <p
+          class="text-title"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    class="container"
+  >
+    <div
+      class="p-card"
+    >
+      <h2>
+        MS in Applied Data Analytics
+      </h2>
+      <div>
+        <p>
+          The Master of Science in Applied Data Analytics is ideal for mid-career IT professionals or students with a computer science background who seek to train their focus on analytics. Students gain solid knowledge of data analytics and examine the presentation and applications of the latest industry tools and approaches within an academically rigorous framework.
+        </p>
+      </div>
+      <div
+        class="link"
+      >
+        <a
+          href="/program/ms-applied-data-analytics"
+        >
+          Learn More About 
+          MS in Applied Data Analytics
+        </a>
+      </div>
+      <div>
+        <span>
+          <strong
+            style="font-weight: 800px;"
+          >
+            Metropolitan College
+          </strong>
+           | 
+          Master's
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders the PCard component correctly 1`] = `
+<div>
+  <div
+    class="p-card"
+  >
+    <h2>
+      MS in Applied Data Analytics
+    </h2>
+    <div>
+      <p>
+        The Master of Science in Applied Data Analytics is ideal for mid-career IT professionals or students with a computer science background who seek to train their focus on analytics. Students gain solid knowledge of data analytics and examine the presentation and applications of the latest industry tools and approaches within an academically rigorous framework.
+      </p>
+    </div>
+    <div
+      class="link"
+    >
+      <a
+        href="/program/undefined"
+      >
+        Learn More About 
+        MS in Applied Data Analytics
+      </a>
+    </div>
+    <div>
+      <span>
+        <strong
+          style="font-weight: 800px;"
+        >
+          Metropolitan College
+        </strong>
+         | 
+        Master's
+      </span>
+    </div>
+  </div>
+</div>
+`;

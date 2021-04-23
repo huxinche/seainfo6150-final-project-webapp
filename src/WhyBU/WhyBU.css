@@ -1,0 +1,10 @@
+.container p{
+    margin: 30px auto;
+    text-align: left;
+}
+
+.container h2{
+    font-family: 'Oswald', cursive;
+    margin-bottom: 0.6em;
+    margin-top: 1em;
+}

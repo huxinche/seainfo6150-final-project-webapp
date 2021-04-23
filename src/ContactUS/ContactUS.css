@@ -1,0 +1,12 @@
+.contact-us h1,.contact-us h2, .contact-us h3{
+    font-family: 'Oswald', cursive;
+}
+
+.contact-us p{
+    margin: 0px;
+}
+
+.contact-us .text-underline{
+    text-decoration: underline;
+    color: darkcyan;
+}

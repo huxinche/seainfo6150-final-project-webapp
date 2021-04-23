@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the Conformation component correctly 1`] = `
+<div>
+  <div
+    class="container mt"
+  >
+    <h1>
+      Your profile
+    </h1>
+    <table>
+      <tbody>
+        <tr>
+          <th>
+            Name
+          </th>
+          <td />
+        </tr>
+        <tr>
+          <th>
+            Gender
+          </th>
+          <td />
+        </tr>
+        <tr>
+          <th>
+            Datebirth
+          </th>
+          <td />
+        </tr>
+        <tr>
+          <th>
+            Email
+          </th>
+          <td />
+        </tr>
+        <tr>
+          <th>
+            Phone
+          </th>
+          <td />
+        </tr>
+        <tr>
+          <th>
+            Religion
+          </th>
+          <td />
+        </tr>
+        <tr>
+          <th>
+            Education level
+          </th>
+          <td />
+        </tr>
+        <tr>
+          <th>
+            Your Password
+          </th>
+          <td />
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <br />
+    <div
+      style="text-align: center;"
+    >
+      <a
+        class="btn-back"
+        href="/"
+      >
+        Back to Home
+      </a>
+    </div>
+    <br />
+    <br />
+  </div>
+</div>
+`;

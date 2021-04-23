@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the NavBar component correctly 1`] = `
+<div>
+  <div
+    class="header"
+  >
+    <div
+      class="title"
+    >
+      <a
+        aria-current="page"
+        class="active"
+        href="/"
+      >
+        <b>
+          B University
+        </b>
+         Graduate Education
+      </a>
+    </div>
+    <div
+      class="logo"
+    >
+      <img
+        alt=""
+        src="UniversityLogo.png"
+      />
+    </div>
+  </div>
+  <nav>
+    <span
+      class="toggle"
+    >
+      <i
+        class="fas fa-bars"
+      />
+    </span>
+    <ul
+      class="nav hide"
+    >
+      <li>
+        <a
+          aria-current="page"
+          class="nav-item selected"
+          href="/"
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          class="nav-item"
+          href="/findmyprogram"
+        >
+          Find Your Program
+        </a>
+      </li>
+      <li>
+        <a
+          class="nav-item"
+          href="/whybu"
+        >
+          Why BU
+        </a>
+      </li>
+      <li>
+        <a
+          class="nav-item"
+          href="/contactus"
+        >
+          Contact US
+        </a>
+      </li>
+    </ul>
+    <ul
+      class="auth hide"
+    >
+      <li>
+        <a
+          class="nav-item"
+          href="/register"
+        >
+          SignUp/Register
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;

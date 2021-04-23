@@ -1,69 +1,146 @@
-import React from "react";
-import { Switch, Route, Link } from "react-router-dom";
-
+import React, { useEffect, useState } from "react";
+import { Switch, Route } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import Home from "./Home/Home.jsx";
-import Foo from "./Foo/Foo.jsx";
-import Bar from "./Bar/Bar.jsx";
-import Baz from "./Baz/Baz.jsx";
 import Error from "./Error/Error.jsx";
+import NavBar from "./Components/Common/Navbar/Navbar";
+import { isEmpty } from "lodash";
+import Form from "./Form/Form.jsx";
+import logo from "./images/UniversityLogo.png";
+import FindYourProgram from "./FindYourProgram/FindYourProgram.jsx";
+import Program from "./Program/Program.jsx";
+import WhyBU from './WhyBU/WhyBU.jsx';
+import ContactUS from "./ContactUS/ContactUS.jsx";
+import Conformation from "./Conformation/Conformation.jsx";
 
 // here is some external content. look at the /baz route below
 // to see how this content is passed down to the components via props
-const externalContent = {
-  id: "article-1",
-  title: "An Article",
-  author: "April Bingham",
-  text: "Some text in the article",
-};
+
 
 function App() {
+  // let history = useHistory();
+  const [form, setform] = useState({
+    name: '',
+    dob: '',
+    phone: '',
+    email: '',
+    password: '',
+    religion: null,
+    edu: null,
+    gender: null,
+  });
+  const [fetchedData, setFetchedData] = useState({});
+
+  // const handleKeyPress = useCallback((e) => {
+  //   switch (e.keyCode) {
+  //     // back
+  //     case 8:
+  //       history.push('/')
+  //       break;
+  //     // f key
+  //     case 70:
+  //       history.push('/findmyprogram')
+  //       break;
+  //     // w key
+  //     case 89:
+  //       history.push('/whybu')
+  //       break;
+  //     // c key
+  //     case 67:
+  //       history.push('/contactus')
+  //       break;
+  //     // r key
+  //     case 82:
+  //       history.push('/register')
+  //       break;
+  //     default:
+  //       break;
+  //   }
+  // }, [history])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      // performs a GET request
+      const response = await fetch("https://demo2293143.mockable.io/courses");
+      const responseJson = await response.json();
+      setFetchedData(responseJson);
+    };
+    // document.addEventListener("keydown", handleKeyPress);
+    if (isEmpty(fetchedData)) {
+      fetchData();
+    }
+  }, [fetchedData]);
+
+
   return (
-    <>
+    <div >
       <header>
-        <nav>
-          <ul>
-            {/* these links should show you how to connect up a link to a specific route */}
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/foo">Foo</Link>
-            </li>
-            <li>
-              <Link to="/bar/hats/sombrero">Bar</Link>
-            </li>
-            <li>
-              <Link to="/baz">Baz</Link>
-            </li>
-          </ul>
-        </nav>
+        <NavBar logo={logo} />
       </header>
-      {/* A <Switch> looks through its children <Route>s and
+      <main >
+        {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/foo" exact component={Foo} />
-        {/* passing parameters via a route path */}
-        <Route
-          path="/bar/:categoryId/:productId"
-          exact
-          render={({ match }) => (
-            // getting the parameters from the url and passing
-            // down to the component as props
-            <Bar
-              categoryId={match.params.categoryId}
-              productId={match.params.productId}
-            />
-          )}
-        />
-        <Route
-          path="/baz"
-          exact
-          render={() => <Baz content={externalContent} />}
-        />
-        <Route component={Error} />
-      </Switch>
-    </>
+        <Switch>
+
+          {/* <Route path="/program/:name" exact component={Foo} /> */}
+          {/* passing parameters via a route path */}
+          <Route
+            path="/program/:name"
+            exact
+            render={({ match }) => (
+              <Program
+                program={fetchedData[match.params.name]}
+              />
+            )}
+          />
+          <Route
+            path="/register"
+            exact
+            render={() => <Form form={form} setForm={setform} />}
+          />
+          <Route
+            path="/whybu"
+            exact
+            render={() => <WhyBU />}
+          />
+          <Route
+            path="/contactus"
+            exact
+            render={() => <ContactUS />}
+          />
+          <Route
+            path="/findmyprogram"
+            exact
+            render={() => <FindYourProgram items={fetchedData} />}
+          />
+          <Route
+            path="/confirm"
+            exact
+            render={() => <Conformation form={form} />}
+          />
+          <Route path="/"
+            exact
+            component={Home} />
+          <Route component={Error} />
+        </Switch>
+      </main>
+      <footer>
+        <div >
+
+          <div >
+            <span><strong>Boston University</strong> Graduate Education</span>
+            <br />
+            <p >
+              One Silber Way, 8th Floor, Boston, MA 02215
+              </p>
+            <p>
+              <a href="mailto:graduateProgram@bu.edu" >graduateProgram@bu.edu</a> | 617-353-2230
+            </p>
+          </div></div>
+
+      </footer>
+    </div>
+
   );
 }
 

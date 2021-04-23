@@ -1,0 +1,39 @@
+.not-found{
+    text-align: center;
+    color: rgb(3, 129, 129);
+}
+
+.not-found .large{
+    font-size: 90px;
+}
+
+@media only screen and (min-width: 768px) {
+    .wapper{
+        padding: 20px 20px;
+    }
+    .not-found{
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        column-gap: 50px;
+        row-gap: 5px;
+        justify-items: center;
+        align-items: center;
+    }
+    .not-found .large{
+        font-size: 70px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .not-found{
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        column-gap: 100px;
+        row-gap: 10px;
+        justify-items: center;
+        align-items: center;
+       
+    }
+}
+
+
